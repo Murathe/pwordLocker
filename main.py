@@ -31,3 +31,7 @@ class Password:
         This function removes a password from the saved list
         """
         Password.Password_list.remove(self)
+
+    @classmethod
+    def password_exist(cls, email):
+        pass
