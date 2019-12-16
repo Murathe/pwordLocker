@@ -11,3 +11,9 @@ Based on short codes, one can type in a command that is already pre-defined in t
 
 # SETUP PROCEDURE
 In order to run and use the program, one will need to clone the repo by running this command: ```git clone https://github.com/Murathe/pwordLocker```
+
+# RUN THE PROGRAM
+
+One will need to run the application to see it's full potential as well as interact with it on terminal level. 
+
+```python3.6 input.py```
