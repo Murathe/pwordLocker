@@ -21,3 +21,8 @@ One will need to run the application to see it's full potential as well as inter
 #TECHNOLOGIES USED
 
 - Python 3.6
+
+# LICENCE 
+MIT
+
+Copyright (c) Murathe @2019
