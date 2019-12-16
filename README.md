@@ -1,8 +1,8 @@
 # TITLE
-## PASSWORD LOCKER
+PASSWORD LOCKER
 
 # AUTHOR
-## Murathe Isaac
+Murathe Isaac
 
 # PROJECT DESCRIPTION
 This is a terminal configured application that helps users to generate and store site's passwords. It gives one the baility to view all other saved passwords stored as an array.
@@ -18,11 +18,12 @@ One will need to run the application to see it's full potential as well as inter
 
 ```python3.6 input.py```
 
-#TECHNOLOGIES USED
-
+# TECHNOLOGIES USED
 - Python 3.6
+
+# CONTRIBUTIONS
+In a case you may ned to contribute to this project, clone it and make a pull request and it'll be reviewed in time.
 
 # LICENCE 
 MIT
-
 Copyright (c) Murathe @2019
