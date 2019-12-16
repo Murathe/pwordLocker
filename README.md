@@ -17,3 +17,7 @@ In order to run and use the program, one will need to clone the repo by running 
 One will need to run the application to see it's full potential as well as interact with it on terminal level. 
 
 ```python3.6 input.py```
+
+#TECHNOLOGIES USED
+
+- Python 3.6
