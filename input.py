@@ -81,22 +81,21 @@ def main():
             print("New passwords are secure\n")
             site = input("The site you want a passwor dfor is?\n")
             user_name = input("A unique username please?\n")
-            length = input("How long do you want it to be?\n")
-            
-            try:
-                add_password(password)
-                print(f"Password generated for {site}\n")
-            except ValueError:
-                print("The length value should be a number\n")
+            # length = input("How long do you want it to be?\n")
+            # try:
+            #     add_password(password)
+            #     print(f"Password generated for {site}\n")
+            # except ValueError:
+            #     print("The length value should be a number\n")
         elif command == 'viewall':
             if view_passwords():
                 for password in Password.Password_list:
-                    print("-"*6, view_passwords().index(password)+1, "-"*6, "\n")
+                    print("-"*4, view_passwords().index(password)+1, "-"*4, "\n")
                     print(f"Username --> {password.username}\n")
                     print(f"Password --> {password.password}\n")
             else:
                 print("Save some passwords and I'll have some to display next time\n")
-        elif command = ='delete':
+        elif command =='delete':
             print("This the original rabbit hole, you sure want to delete it?\n")
             pass_word = getpass.getpass("May I hav the password to be deleted?\n")
             if pass_word == user_pass:
@@ -105,9 +104,14 @@ def main():
                     delete_password(site)
                     print(f"{site} password has been deleted\n")
                 else:
-                    
+                    print("That site and password does not exist\n")
+            else:
+                print("Wrong password, give it another trial\n")
+        elif command == 'exit':
+            break      
 
-
+if __name__ == "__main__":
+        main()
 
 
 

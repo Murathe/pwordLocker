@@ -6,12 +6,12 @@ class Password:
     """
     Password_list = []
 
-    def __init__(self, username, email, password):
+    def __init__(self, site, username, password):
         """
         Create instances of the major class
         """
+        self.site = site
         self.username = username
-        self.email = email
         self.password = password
 
     def save_password(self):
@@ -34,4 +34,10 @@ class Password:
 
     @classmethod
     def password_exist(cls, email):
-        pass
+        """
+        Query along to see if password exists
+        """
+        for password in cls.password_list:
+            if password_site.lower() == site.lower():
+                return true
+            return False
