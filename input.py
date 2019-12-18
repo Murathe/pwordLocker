@@ -1,6 +1,7 @@
 from main import Password
 from user import User
 import getpass
+import random
 
 def new_user(login, Password):
     """
@@ -57,21 +58,20 @@ def main():
     print("-"*6, "Sign up", "-"*6, "\n")
 
     user_name = input("Username\n")
-    user_pass = getpass.getpass("Password:\n")
 
     """
     New user login
     """
 
-    print(f"Welcome back {user_name}\n")
+    print(f"Welcome back {user_name}\n ")
     print("What's next?")
 
     while True:
         command = input(
-            "Here you can 'generate' to generate a new password, 'delete' to delete a password, 'addnew' to add an existing password, 'viewall' to view all your generated passwords or, 'exit' to leave:( \n"
+            "Here you can 'gen' to create a new account with a ready password, 'gent' to create a new account with your preffered password, delete' to delete a password, 'addnew' to add an existing password, 'viewall' to view all your generated passwords or, 'exit' to leave:( \n"
         )
-        if command == "addnew":
-            print("Not that you here, let's build a password \n")
+        if command == 'addnew':
+            print("Now that you here, let's build a password \n")
             site = input("The site you want a passwor dfor is?\n")
             user_name = input("A unique username please?\n")
             password = getpass.getpass("You unique password is?\n")
@@ -82,11 +82,11 @@ def main():
             site = input("The site you want a passwor dfor is?\n")
             user_name = input("A unique username please?\n")
             # length = input("How long do you want it to be?\n")
-            # try:
-            #     add_password(password)
-            #     print(f"Password generated for {site}\n")
-            # except ValueError:
-            #     print("The length value should be a number\n")
+            try:
+                add_password(password)
+                print(f"Password generated for {site}\n")
+            except ValueError:
+                print("The length value should be a number\n")
         elif command == 'viewall':
             if view_passwords():
                 for password in Password.Password_list:
@@ -111,7 +111,7 @@ def main():
             break      
 
 if __name__ == "__main__":
-        main()
+    main()
 
 
 
