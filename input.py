@@ -70,6 +70,7 @@ def main():
         command = input(
             "Here you can 'gen' to create a new account with a ready password, 'gent' to create a new account with your preffered password, delete' to delete a password, 'addnew' to add an existing password, 'viewall' to view all your generated passwords or, 'exit' to leave:( \n"
         )
+        command = input().lower()
         if command == 'addnew':
             print("Now that you here, let's build a password \n")
             site = input("The site you want a passwor dfor is?\n")
@@ -77,7 +78,7 @@ def main():
             password = getpass.getpass("You unique password is?\n")
             
             add_password(password)
-        elif command == 'generate':
+        elif command == 'gent':
             print("New passwords are secure\n")
             site = input("The site you want a passwor dfor is?\n")
             user_name = input("A unique username please?\n")
@@ -87,6 +88,11 @@ def main():
                 print(f"Password generated for {site}\n")
             except ValueError:
                 print("The length value should be a number\n")
+        elif command == 'gen':
+            print("Let's build an account with the safest passowrd")
+            site = input("Site name")
+            user_name = input("Preffered username")
+            password = 
         elif command == 'viewall':
             if view_passwords():
                 for password in Password.Password_list:
