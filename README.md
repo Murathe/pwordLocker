@@ -5,12 +5,13 @@ PASSWORD LOCKER
 Murathe Isaac
 
 # BDD
-|Behaviour          | Input     | Output            |
-|Global account     | email     | password          |
-|Generate password  | gen       | pre-defined pword |
-|Enter password     | gent      | inputed password  |
-|Delete a password  | del       | password deleted  |
-|Exit the program   | exit      | terminal exited   | 
+behaviour          | Input     | Output            
+-------------------|-----------|---------
+Global account     | email     | password          
+Generate password  | gen       | pre-defined pword 
+Enter password     | gent      | inputed password  
+Delete a password  | del       | password deleted  
+Exit the program   | exit      | terminal exited    
 
 
 
