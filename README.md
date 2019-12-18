@@ -4,6 +4,16 @@ PASSWORD LOCKER
 # AUTHOR
 Murathe Isaac
 
+# BDD
+|Behaviour          | Input     | Output            |
+|Global account     | email     | password          |
+|Generate password  | gen       | pre-defined pword |
+|Enter password     | gent      | inputed password  |
+|Delete a password  | del       | password deleted  |
+|Exit the program   | exit      | terminal exited   | 
+
+
+
 # PROJECT DESCRIPTION
 This is a terminal configured application that helps users to generate and store site's passwords. It gives one the baility to view all other saved passwords stored as an array.
 
