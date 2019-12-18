@@ -56,15 +56,18 @@ def main():
     print("\n")
     print("You welcome to Pword Locker.\n")
     print("-"*20, "Sign up", "-"*20, "\n")
-
+    print("Let's configure a few things for you.\n")
     name = input("Your name\n")
-    print("*" *4,f"Welcome {name} . What's next?", "*"*4, "\n")
+    gMail = input("Your global mail: ")
+    gpwd = input("Password for you global email: ")
+    print(f"Your global email is {gMail} passworded as {gpwd} \n")
+    print("*" *4,f"So welcome {name} and let's see the magic happening. What's next?", "*"*4, "\n")
 
     while True:
         command = input(
             "Here: 'gen' for an account with a ready password, 'gent' for an account with your preffered password, del' to delete a password, 'addnew' to add an existing password, 'viewall' to view all your generated passwords or, 'exit' to leave:( \n"
         )
-        command = input().lower()
+        # command = input().lower()
         if command == 'addnew':
             print("Now that you here, let's build a password \n")
             site = input("The site you want a passwor dfor is?\n")
@@ -73,10 +76,9 @@ def main():
             
             add_password(password)
         elif command == 'gent':
-            print("New passwords are secure\n")
-            site = input("The site you want a passwor dfor is?\n")
             user_name = input("A unique username please?\n")
-            password = input()
+            site = input("The site you want a password for is?\n")
+            password = input("Enter a secure passwords")
             print("\n")
             print(f"Your {site} account with a username of {user_name} and '{password}' as password has been created & saved")
             print("*" *30)
