@@ -54,21 +54,15 @@ def main():
     Run major functions
     """
     print("\n")
-    print("You welcome to Pword Locker. Here to guranatee you a safe storage of your important security aspect\n")
-    print("-"*6, "Sign up", "-"*6, "\n")
+    print("You welcome to Pword Locker.\n")
+    print("-"*20, "Sign up", "-"*20, "\n")
 
-    user_name = input("Username\n")
-
-    """
-    New user login
-    """
-
-    print(f"Welcome back {user_name}\n ")
-    print("What's next?")
+    name = input("Your name\n")
+    print("*" *4,f"Welcome {name} . What's next?", "*"*4, "\n")
 
     while True:
         command = input(
-            "Here you can 'gen' to create a new account with a ready password, 'gent' to create a new account with your preffered password, delete' to delete a password, 'addnew' to add an existing password, 'viewall' to view all your generated passwords or, 'exit' to leave:( \n"
+            "Here: 'gen' for an account with a ready password, 'gent' for an account with your preffered password, del' to delete a password, 'addnew' to add an existing password, 'viewall' to view all your generated passwords or, 'exit' to leave:( \n"
         )
         command = input().lower()
         if command == 'addnew':
@@ -82,17 +76,26 @@ def main():
             print("New passwords are secure\n")
             site = input("The site you want a passwor dfor is?\n")
             user_name = input("A unique username please?\n")
+            password = input()
+            print("\n")
+            print(f"Your {site} account with a username of {user_name} and '{password}' as password has been created & saved")
+            print("*" *30)
             # length = input("How long do you want it to be?\n")
-            try:
-                add_password(password)
-                print(f"Password generated for {site}\n")
-            except ValueError:
-                print("The length value should be a number\n")
+            # try:
+            #     add_password(password)
+            #     print(f"Password generated for {site}\n")
+            # except ValueError:
+            #     print("The length value should be a number\n")
         elif command == 'gen':
-            print("Let's build an account with the safest passowrd")
-            site = input("Site name")
-            user_name = input("Preffered username")
-            password = 
+            print("Let's build an account with the safest passowrd\n")
+            site = input("Site name\n")
+            user_name = input("Preffered username\n")
+
+            m = "nhjk34juyFRGNhDG./)9("
+            password = "".join(random.sample(m, 10))
+            print("-"*20)
+            print(f"Your {site} account with a username of {user_name} and '{password}' as password has been created & saved")
+            print("*" *30)
         elif command == 'viewall':
             if view_passwords():
                 for password in Password.Password_list:
@@ -101,7 +104,7 @@ def main():
                     print(f"Password --> {password.password}\n")
             else:
                 print("Save some passwords and I'll have some to display next time\n")
-        elif command =='delete':
+        elif command =='del':
             print("This the original rabbit hole, you sure want to delete it?\n")
             pass_word = getpass.getpass("May I hav the password to be deleted?\n")
             if pass_word == user_pass:
